@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding:0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    }
+
+body {
+    background-color: rgba(250, 255, 240, 0.767);
+}
+
+.noticia {
+    display: inline-block;
+    padding: 15px;
+}
+
+.cabecalho {
+    background-color: rgb(203, 201, 201);
+    height: 80px;
+    width: 100%;
+    display:flex;
+    padding-top: 28px;
+    padding-left: 12%;
+}
+
+.cabecalho .logo {
+    font-size: 17px;
+    font-weight: bold;
+    padding-right: 28%;
+}
+
+.menu-navegacao ul li{
+    display: inline;
+    font-size: 13px;
+    padding: 8px;
+}
+
+.menu-navegacao ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+}
+
+#div-busca{
+    padding-left: 20px;
+}
+
+#div-busca input {
+    border-radius: 12px;
+    height: 22px;
+    width: 180px;
+    border: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(152, 150, 150);
+    height: 60px;
+}
+
+.footer p{
+    font-size: 13px;
+    padding-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+}
+
+#cadastrar-noticia {
+    background-color: rgba(250, 255, 240, 0.767);
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-left: 38%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+#cadastrar-noticia input, select, textarea, button {
+    border-radius: 5px;
+}
+
+#titulo {
+    margin-bottom: 1em;
+}
+
+.campo{
+    margin-bottom: 1em;
+}
+
+.campo label {
+    margin-bottom: 1em;
+    display: block;
+}
+
+.campo input, .campo textarea {
+    padding: 2px;
+    border: 1px solid #000;
+    display: block;
+    width: 340px;
+}
+
+.botao-cadastrar {
+    font-size: 14px;
+    color: aliceblue;
+    background: rgb(108, 108, 108);
+    position: absolute;
+    margin-left: 5em;
+}
