@@ -1,36 +1,36 @@
 const express = require('express');
-const app = express();
-const handlebars = require('express-handlebars')
-const bodyParser = require('body-parser')
-const Sequelize = require('sequelize')
+const { engine }  = require('express-handlebars')
+// const bodyParser = require('body-parser')
+// const Sequelize = require('sequelize')
 // const Noticia = require('./models/Noticia')
+
+const app = express();
+app.use('/public', express.static(__dirname + '/public'))
 
 // Config
     // Template Engine
-        const hbs = handlebars.create({
-            defaultLayout: 'main'
-        })
-        app.engine('handlebars', hbs.engine)
+        app.engine('handlebars', engine())
         app.set('view engine', 'handlebars')
+        app.set('views', './views')
 
     // Body Parser
-        app.use(bodyParser.urlencoded({extended: false}))
-        app.use(bodyParser.json)
+        // app.use(bodyParser.urlencoded({extended: false}))
+        // app.use(bodyParser.json)
 
          // Conexao com o banco de dados
-    const sequelize = new Sequelize ('dbnoticias', 'root', 'root123',{
-    host: "localhost",
-    dialect: 'mysql'
-})
+//     const sequelize = new Sequelize ('dbnoticias', 'root', 'root123',{
+//     host: "localhost",
+//     dialect: 'mysql'
+// })
 
 // Rotas
-    app.get('/cadastro', function(req, res){
+
+    app.get('/', (req, res) => {
+        res.render('home')
+    })
+    app.get('/cadastro', (req, res) => {
         res.render('formulario')
     })
-
-    // app.get('/', function(req, res){
-    //     res.render('home')
-    // })
 
     // app.post('/add', function(req, res){
     //     Noticia.create({

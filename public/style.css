@@ -85,8 +85,13 @@ body {
     border-radius: 5px;
 }
 
-#titulo {
+.titulo {
     margin-bottom: 1em;
+}
+#titulo-home{
+    font-size: 24px;
+    padding-top: 14px;
+    text-align: center;
 }
 
 .campo{
