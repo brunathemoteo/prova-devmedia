@@ -13,4 +13,5 @@ const Noticia = db.sequelize.define('noticias',{
 })
 
 module.exports = Noticia
+
 //Noticia.sync({force: true})
