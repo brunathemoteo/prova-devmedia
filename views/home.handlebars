@@ -1,9 +1,9 @@
-<h1 id="titulo-home">Lista de Notícias</h1>
-
-{{#each posts}}
-
-    <h1>{{tituloNoticia}}</h1>
-    <p>Conteudo: {{conteudoNoticia}}</p>
-    <hr>
-
-{{/each}}
+<div class="flex-container">
+    {{#each posts}}
+        <div class="flex-item">
+            <h1 id="titulo-noticia">{{tituloNoticia}}</h1>
+            <p>{{conteudoNoticia}}</p>
+            <a href="/deletar/{{id}}" class="botao"><button class="btn-delete">Deletar</button></a>
+        </div>
+    {{/each}}
+</div>   

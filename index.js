@@ -20,11 +20,11 @@ app.use('/public', express.static(__dirname + '/public'))
 // Rotas
 
     app.get('/', (req, res) => {
-        Noticia.findAll().then(function(posts){
+        Noticia.findAll({order: [['id', 'ASC']]}).then(function(posts){
             res.render('home', {posts: posts})
         })
     })
-    
+
     app.get('/cadastro', (req, res) => {
         res.render('formulario')
     })
@@ -38,6 +38,14 @@ app.use('/public', express.static(__dirname + '/public'))
             res.redirect('/')
         }).catch(function(erro){
             res.send('Houve um erro: ' + erro)
+        })
+    })
+
+    app.get('/deletar/:id', function(req, res){
+        Noticia.destroy({where: {'id' : req.params.id}}).then(function(){
+            res.send('Noticia deletada com sucesso')
+        }).catch(function(erro){
+            res.send('Esta notícia nao existe!')
         })
     })
 

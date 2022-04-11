@@ -8,31 +8,33 @@
     <link rel="stylesheet" href="/public/style.css">
 </head>
 <body>
-     <header>
-        <div class="cabecalho">
-                <p class="logo">LOGO</p>
+    <div class="container">
+            <header class="header">
+                        <div class="cabecalho">
+                        <p class="logo">LOGO</p>
+                        <nav class="menu-navegacao">
+                            <ul>
+                                <li>
+                                    <a href="/cadastro">Cadastrar notícias</a>
+                                </li>
+                                <li>
+                                    <a href="./">Exibir notícias</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div id="div-busca">
+                            <input type="text" placeholder="    Buscar notícia">
+                        </div>
+                        </div>
+            </header>
 
-                <nav class="menu-navegacao">
-                    <ul>
-                        <li>
-                            <a href="/cadastro">Cadastrar notícias</a>
-                        </li>
-                        <li>
-                            <a href="./">Exibir notícias</a>
-                        </li>
-                    </ul>
-                </nav>
+        <main class="main-grid">
+        {{{body}}}
+        </main>
 
-                <div id="div-busca">
-                    <input type="text" placeholder="    Buscar notícia">
-                </div>
-        </div>
-    </header>
-
-    {{{body}}}
-
-    <footer class="footer">
-        <p>Desenvolvido por devbruna</p>
-    </footer> 
+        <footer class="footer">
+            <p>Desenvolvido por Bruno</p>
+        </footer> 
+    </div>
 </body>
 </html>

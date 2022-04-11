@@ -6,9 +6,8 @@ const Sequelize = require('sequelize')
     dialect: 'mysql',
     query:{raw:true}
 })
-console.log('conectado ao bd com sucesso')
-// exportando sequelize e Sequelize
 
+// Exportando sequelize e Sequelize
 module.exports = {
     Sequelize: Sequelize,
     sequelize: sequelize
