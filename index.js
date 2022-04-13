@@ -57,7 +57,7 @@ app.use('/public', express.static(__dirname + '/public'))
                     }
                 }    
             ]
-        }      
+        }  //    
     }).then(function(posts){
             res.render('home', {posts: posts})
         })
