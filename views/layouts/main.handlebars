@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícias</title>
     <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <div class="container">
             <header class="header">
@@ -22,10 +24,14 @@
                                 </li>
                             </ul>
                         </nav>
-                        <div id="div-busca">
-                            <input type="text" placeholder="    Buscar notícia">
-                        </div>
-                        </div>
+                            <div class="input-search">
+                                <form action="/consulta" method="POST">
+                                    <input type="text" name="idconsulta" >     
+                                    <button class="icon" type="submit">
+                                        <i style="font-size:18px" class="fa fa-search"></i>
+                                    </button>             
+                                </form>
+                            </div>
             </header>
 
         <main class="main-grid">
@@ -33,7 +39,7 @@
         </main>
 
         <footer class="footer">
-            <p>Desenvolvido por Bruno</p>
+            <p>Desenvolvido por Ddev </p>
         </footer> 
     </div>
 </body>

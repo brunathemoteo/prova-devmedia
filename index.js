@@ -2,7 +2,9 @@ const express = require('express');
 const { engine }  = require('express-handlebars')
 const bodyParser = require('body-parser')
 const Sequelize = require('sequelize')
-const Noticia = require('./models/Noticia')
+const Noticia = require('./models/Noticia');
+const { or } = require('sequelize');
+const Op = Sequelize.Op
 
 const app = express();
 app.use('/public', express.static(__dirname + '/public'))
@@ -38,6 +40,26 @@ app.use('/public', express.static(__dirname + '/public'))
             res.redirect('/')
         }).catch(function(erro){
             res.send('Houve um erro: ' + erro)
+        })
+    })
+    
+    app.post('/consulta', function(req, res){
+        Noticia.findAll({
+            where: { 
+                [Op.or]: [{ 
+                    tituloNoticia: {
+                        [Op.like]: `%`+req.body.idconsulta+`%`
+                    }
+                },
+                {
+                    categoriaNoticia: 
+                        {[Op.like]: `%`+req.body.idconsulta+`%`
+                    }
+                }    
+            ]
+        }      
+    }).then(function(posts){
+            res.render('home', {posts: posts})
         })
     })
 
