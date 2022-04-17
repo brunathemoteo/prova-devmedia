@@ -21,7 +21,7 @@ app.use('/public', express.static(__dirname + '/public'))
 
 // Rotas
 
-    app.get('/', (req, res) => {
+    app.get('/home', (req, res) => {
         Noticia.findAll({order: [['id', 'ASC']]}).then(function(posts){
             res.render('home', {posts: posts})
         })
@@ -57,9 +57,16 @@ app.use('/public', express.static(__dirname + '/public'))
                     }
                 }    
             ]
-        }  //    
+        }  
     }).then(function(posts){
             res.render('home', {posts: posts})
+        })
+    })
+
+    app.get('/acessar/:id', function(req, res){
+        Noticia.findAll({ where: {'id' : req.params.id}}).then(function(noticias)
+        {
+            res.render('noticia',{noticias: noticias})
         })
     })
 

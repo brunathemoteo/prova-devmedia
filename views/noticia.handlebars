@@ -1,11 +1,11 @@
 <div class="flex-container">
-    {{#each posts}}
+    {{#each noticias}}
         <div class="flex-item">
             <h1 id="titulo-noticia">{{tituloNoticia}}</h1>
+            <p>Categoria: {{categoriaNoticia}}</p>
             <p>{{conteudoNoticia}}</p>
-            <a href="/acessar/{{id}}" class="botao"><button class="btn-delete">Acessar</button></a>
+            <a href="/update/{{id}}" class="botao"><button class="btn-delete">Alterar</button></a>
             <a href="/deletar/{{id}}" class="botao"><button class="btn-delete">Deletar</button></a>
-
         </div>
     {{/each}}
 </div>   
