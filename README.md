@@ -1,6 +1,5 @@
 # Prova-DevMedia
-Replicação da prova de estagiário devmedia utilizando javascript.
-
+Replicação da prova de estagiário devmedia utilizando Node JS
 Conceitos aplicados:
 - Node Js, Express, Handlebars, MySQL e Sequelize ORM
 - Layout Responsivo

@@ -3,7 +3,6 @@ const { engine }  = require('express-handlebars')
 const bodyParser = require('body-parser')
 const Sequelize = require('sequelize')
 const Noticia = require('./models/Noticia');
-const { or } = require('sequelize');
 const Op = Sequelize.Op
 
 const app = express();
