@@ -36,12 +36,12 @@ body {
 }
 
 .flex-container {
-    display: flex;
     background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
     padding: 30px;
     margin: auto;
     width: 60vw;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
