@@ -2,45 +2,42 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícias</title>
+    <meta name="description" content="Site para cadastro de notícias">
     <link rel="stylesheet" href="/public/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    <div class="container">
-            <header class="header">
-                        <div class="cabecalho">
-                        <p class="logo">LOGO</p>
-                        <nav class="menu-navegacao">
-                            <ul>
-                                <li>
-                                    <a href="/cadastro">Cadastrar notícias</a>
-                                </li>
-                                <li>
-                                    <a href="/home">Exibir notícias</a>
-                                </li>
-                            </ul>
-                        </nav>
-                            <div class="input-search">
-                                <form action="/consulta" method="POST">
-                                    <input type="text" name="idconsulta" >     
-                                    <button class="icon" type="submit">
-                                        <i style="font-size:18px" class="fa fa-search"></i>
-                                    </button>             
-                                </form>
-                            </div>
-            </header>
+<div class="container">
+    
+    <header class="header">
+        <div class="cabecalho">
+            <p class="logo">LOGO</p>
+            <nav class="menu-navegacao">
+                <ul>
+                    <li><a href="/cadastro">Cadastrar notícias</a></li>
+                    <li><a href="/home">Exibir notícias</a></li>
+                </ul>
+            </nav>
+            <div class="input-search">
+                <form action="/consulta" method="POST">
+                    <input type="text" name="idconsulta" >     
+                    <button class="icon" type="submit">
+                        <i style="font-size:17px" class="fa fa-search"></i>
+                    </button>             
+                </form>
+            </div>
+        </div>
+    </header>
 
-        <main class="main-grid">
-        {{{body}}}
-        </main>
+    <main class="main-grid">
+    {{{body}}}
+    </main>
 
-        <footer class="footer">
-            <p>Desenvolvido por Bruna </p>
-        </footer> 
-    </div>
+    <footer class="footer">
+        <p>Desenvolvido por Bruna</p>
+    </footer> 
+</div>
 </body>
 </html>
